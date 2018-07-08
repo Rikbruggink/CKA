@@ -1,0 +1,17 @@
+---
+# prepare.yml
+#
+# install ssh keys and set the correct hostname
+#
+# Example:
+#
+#   
+#
+- hosts: all
+  tasks:
+    - authorized_key:
+       user: root
+       state: present
+       key: https://github.com/rikbruggink.keys
+    - hostname:
+       name: '{{ inventory_hostname_short }}.{{ ansible_eth0["ipv4"]["address"] }}.xip.io'
