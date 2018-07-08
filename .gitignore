@@ -1,0 +1,4 @@
+*.DS_Store
+packer/output-*
+packer/packer_cache/*
+.vscode*
