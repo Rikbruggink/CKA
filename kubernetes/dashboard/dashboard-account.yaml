@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: my-dashboard-sa
+  namespace: default
+secrets:
+- name: my-dashboard-sa-token
