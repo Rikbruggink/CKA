@@ -1,0 +1,13 @@
+---
+# prepare.yml
+#
+# install ssh keys and set the correct hostname
+#
+# Example:
+#
+#   
+#
+- hosts: all
+  tasks:
+    - shell: yes 'y'| kubeadm reset
+    - shell: reboot
